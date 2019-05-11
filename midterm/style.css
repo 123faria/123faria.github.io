@@ -1,8 +1,4 @@
 body { 
-			  background-image: url("https://wallpaperplay.com/walls/full/b/9/c/210196.jpg");
-				background-repeat:no-repeat;
-              background-size: cover;
-              width: 90%;
 font-family: Arial, sans-serif;
 margin: 0;
 padding: 0; 
@@ -36,7 +32,7 @@ border-radius: 10px;
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
 
-background: #e60000;
+background: #cc0000;
 padding: 20px 0 40px 0;
 }
 #header h1 {
@@ -64,7 +60,7 @@ display: inline;
 }
 
 #topmenu {
-background: #f1f1f1;
+background: #99ffff;
 padding: 10px 20px;
 border-bottom: 1px solid #e1e1e1;
 border-top: 1px solid #e1e1e1;
