@@ -4,7 +4,7 @@ margin: 0;
 padding: 0;
 font-size: 16px;
 line-height: 24px;
-background-image: url("./images/backgroundimage.jpg");
+background-image: url("https://ak8.picdn.net/shutterstock/videos/8849338/thumb/1.jpg?i10c=img.resize(height:160)");
 background-repeat: repeat;
 }
 
@@ -31,7 +31,7 @@ background-color: #ffb3b3;
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
 
-background: #cc0000;
+background: #ff8080;
 padding: 20px 0 40px 0;
 }
 #header h1 {
@@ -71,10 +71,21 @@ border-top: 1px solid #e1e1e1;
 
 .search { float: right; }
 
+#contentimage01 {
+  float: left;
+  margin-left: 180PX;
+
+}
+#contentimage0203 {
+  float: left;
+  margin-left: 90PX;
+
+}
+
 #menu {
 font-size: 14px;
 float: right;
-width: 300px;
+width: 20px;
 color: #fff;
 margin: 30px 20px 20px 0;
 }
@@ -91,7 +102,7 @@ list-style-type: none; margin: 0; padding: 0 10px 10px 10px;
 #menu ul li a { color: #12c; text-decoration: none; border-bottom: 1px dotted #12c; }
 #menu ul li a:hover { color: #c12; border-bottom: 1px dotted #c12; }
 
-#content { float: left; width: 580px; margin: 10px 0 40px 20px;}
+#content { float: left; width: 940px; margin: 10px 0 40px 20px;}
 #content h2 { font-weight: normal; font-size: 22px; line-height: 33px; }
 #content h3 { font-size: 17px; font-weight: normal; }
 
