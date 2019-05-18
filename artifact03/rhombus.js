@@ -7,6 +7,7 @@ function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
 upLeft(pHeight, pColorEven, pColorOdd, pSymbol);
 upRight(pHeight, pColorEven, pColorOdd, pSymbol);
 downRight(pHeight, pColorEven, pC olorOdd, pSymbol);
+downLeft(pHeight, pColorEven, pC olorOdd, pSymbol);
 
 }
 function upLeft(pHeight, pColorEven, pColorOdd, pSymbol){
