@@ -1,82 +1,129 @@
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta name="robots" content="noindex">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Artifact #4</title>
-  </head>
-  <body>
-    <h1>CONTACT US FROM</h1>
-    <div =id"errorMessages"></div>
-    <!--Add the URL to your Thank you page-->
-    <from action="http://bellevuecollege.edu" method="get" name="mycontact"onsubmit="return ValidateFrom();">
-      <fieldset>
-        <legend>User Information</legend>
-        <label for="firstname">Enter Firstname(Max 20 characters)</label>
-        <br>
-        <label for="lastname">Enter Lastname(Max 50 characters)</label>
-        <br>
-        <input type="text" id="lastname">
-        <br>
-        <label for="email">Enter Email</label>
-        <br>
-        <input type="text" id="email">
-        <br>
-        <label for="phone">Enter Phone Number (Max 15 characters)</label>
-        <br>
-        <input type="text" id="phone">
-        <br>
-        <label for="username">Enter username (Max 12 characters)</label>
-        <br>
-        <input type="text" maxlength="12" id="username">
-        <br>
-        <label for="password">Enter password (Max 7 characters)</label>
-        <br>
-        <input type="password" maxlength="7" id="password">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="artifact04.js">
+  </script>
+</head>
+<body>
+<div id="header">
+ <h2> CONTACT US FORM</h2>
+  </div>
+<div id="form">
+  <br>
+<div id="left">
+  <table>
+  <tr>
+   <td><label>First Name:</label></td>
+<td><input type="text" id="firstName" name="firstname"  size="20"></td>
+    </tr>
+<tr><td><label>Last Name:</label> </td>
+<td><input type="text" id="lastName" name="lastname" size="20"></td>
+    <tr><td><label>Email Address:</label></td>
+<td><input type="text" id="email" name="email" size="20"></td>
+<tr><td><label>Phone Number:</label></td>
+<td><input type="text" id="phone" name="phone" size="20"></td>
+</table>
+  <table>
+    <tr>
+      <td><label>Username:</label></td>
+      <td><input type="text" id="username" name="username" size="20"></td>
+    </tr>
+    <tr>
+      <td><label>Password:</label></td>
+      <td><input type="password" id="password" name="password" size="20"></td>
+    </tr>
+  </table>
 
-      </fieldset>
-      <fieldset>
-        <legend>Current Address</legend>
-        <label for="address">Enter Address</label>
-        <br>
-        <input type="text" name="address" id="address" size="50">
-        <br>
-        <label for="city">Enter City</label>
-        <br>
-        <input type="text" name="city" id="city">
-        <br>
-        <label for="countries">Choose Country</label>
-        <br>
-        <select id="countries">
-          <option>Canada</option>
-          <option>Mexico</option>
-          <option>United States</option>
-        </select>
-        <br>
-        <label for="zipcode">Enter zipcode</label>
-        <br>
-        <input type="text" name="zip" id="zipcode">
-      </fieldset>
+  </div>
 
-      <fieldset>
-        <legend>Feel free to add comments</legend>
-        <textarea name="commentbox" id="commentbox" row="4" cols="50"></textarea>
-      </fieldset>
+<div id="right">
+<table>
+  <tr>
+   <td><label>Address:</label></td>
+<td><input type="text" id="address" name="address"  size="20"></td>
+    </tr>
+<tr><td><label>City:</label> </td>
+<td><input type="text" id="city" name="city" size="20"></td>
 
-      <br>
-      <input id="submit" type="submit" value="submit">
-      <input id="cancel" type="submit" value="cancel">
-      </from>
+  <tr><td><label>State:</label> </td>
+<td> <select id="State" name="agegroup">
+ <option value="AL">Alabama - AL</option>
+ <option value="AK">Alaska - AK</option>
+  <option value="AZ">Arizona - AZ</option>
+   <option value="AR">Arkansas - AR</option>
+ <option value="CA">California - CA</option>
+  <option value="CO">Colorado - CO</option>
+ <option value="CT">Connecticut - CT</option>
+  <option value="DE">Delaware - DE</option>
+   <option value="FL">Florida - FL</option>
+ <option value="GA">Georgia - GA</option>
+  <option value="HI">Hawaii - HI</option>
+  <option value="ID">Idaho - ID</option>
+ <option value="IL">Illinois - IL</option>
+  <option value="IN">Indiana - IN</option>
+   <option value="IA">Iowa - IA</option>
+ <option value="KS">Kansas - KS</option>
+  <option value="KY">Kentucky - KY</option>
+ <option value="LA">Louisiana - LA</option>
+  <option value="ME">Maine - ME</option>
+   <option value="MD">Maryland - MD</option>
+ <option value="MA">Massachusetts - MA</option>
+  <option value="MI">Michigan - MI</option>
+  <option value="MN">Minnesota - MN</option>
+ <option value="MS">Mississippi - MS</option>
+  <option value="MO">Missouri - MO</option>
+   <option value="MT">Montana - MT</option>
+ <option value="NE">Nebraska - NE</option>
+  <option value="NV">Nevada - NV</option>
+ <option value="NH">New Hampshire - NH</option>
+  <option value="NJ">New Jersey - NJ</option>
+   <option value="NM">New Mexico - NM</option>
+ <option value="NY">New York - NY</option>
+  <option value="NC">North Carolina - NC</option>
+  <option value="ND">North Dakota - ND</option>
+ <option value="OH">Ohio - OH</option>
+  <option value="OK">Oklahoma - OK</option>
+   <option value="OR">Oregon - OR</option>
+ <option value="PA">Pennsylvania - PA</option>
+  <option value="RI">Rhode Island - RI</option>
+ <option value="SC">South Carolina - SC</option>
+  <option value="SD">South Dakota - SD</option>
+   <option value="TN">Tennessee - TN</option>
+ <option value="TX">Texas - TX</option>
+  <option value="UT">Utah - UT</option>
+   <option value="VT">Vermont - VT</option>
+ <option value="VA">Virginia - VA</option>
+  <option value="WA">Washington - WA</option>
+  <option value="DC">Washington - DC</option>
+   <option value="WV">West Virginia - WV</option>
+ <option value="WI">Wisconsin - WI</option>
+  <option value="WY">Wyoming - WY</option>
+ </select></td>
 
-      <footer>
-        <br>
-        <a herf="https://jigsaw.w3.org/css-validator/check/referer">
-          <img style="border:0;width:88px;height:31px" scr="https://jigsaw.w3.org/css-validator/images/vcss" alt="valid CSS!" />
-          </a>
-          <a herf="https://jigsaw.w3.org/css-validator/check/referer">
-            <img style="border:0;width:88px;height:31px" scr="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="valid CSS!" />
-            </a>
-          </footer>
-          </body>
-          </html>
+
+  <tr><td><label>Country:</label> </td>
+<td> <select id="country" name="agegroup">
+ <option value="USA">United States</option>
+ <option value="Canada">Canada</option>
+  <option value="Af">Afghanistan</option>
+ </select></td>
+
+<tr><td><label>Zip Code:</label></td>
+<td><input type="text" id="zip" name="zip" size="20"></td>
+</table>
+
+ </fieldset><br>
+   <h3>Enter comments</h3>
+ <textarea name="comments" cols="35" rows="7"></textarea><br>
+
+ <div id="botton">
+ <button onclick='return validateForm()' class="btn btn-default">Submit</button>
+   </div>
+  </div>
+  </div>
+</body>
+</html>

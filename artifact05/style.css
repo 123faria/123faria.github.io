@@ -1,7 +1,26 @@
-function autoSlide(){
-if (document.getElementById("auto").checked)
- next();
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
+h1,h2,#auto
+{
+  margin-left: 25%;
 
-setInterval(autoSlide,2000); // Next
+}
+#caption
+{
+  margin-left: 25%;
+
+}
+
+.floated {
+  float:left;
+  margin-right: 5px;
+}
+
+#btn{
+  margin-left: 25%;
+}
