@@ -142,3 +142,8 @@ p {
         background-size: 72px 72px;
     }
 }
+#btn{
+	float:left;
+	margin-right: 5px;
+	margin-left: 39%;
+}
