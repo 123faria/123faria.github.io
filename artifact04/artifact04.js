@@ -1,118 +1,101 @@
-function inputAlphabet(inputtext){
-var alphaExp = /^[a-zA-Z]+$/;
-if(inputtext.match(alphaExp)){
-return true;
-}else{
-return false;
-}
-}
-function textNumeric(inputtext){
-var numericExpression = /^[0-9]+$/;
-if(inputtext.match(numericExpression)){
-return true;
-}else{
-return false;
-}
-}
+ var frmvalidator = new Validator("myform");
+ frmvalidator.addValidation("FirstName","req","Please enter your First Name");
+ frmvalidator.addValidation("FirstName","maxlen=20",
+        "Max length for FirstName is 20");
 
-function validateFirstName() {
-    var x = document.getElementById('firstName').value;
-    if (!inputAlphabet(x) || x.length>20) {
-        alert("Not a valid first name");
-        return false;
-    }
-  return true;
-}
-function validateLastName() {
-    var x = document.getElementById('lastName').value;
-    if (!inputAlphabet(x) || x.length>50) {
-        alert("Not a valid last name");
-        return false;
-    }
-  return true;
-}
 
-function validateEmail() {
-    var x = document.getElementById('email').value;
-    var atpos = x.indexOf("@");
-    var dotpos = x.lastIndexOf(".");
-    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-        alert("Not a valid e-mail address");
-        return false;
-    }
-  return true;
-}
-function validatePhone() {
-    var x = document.getElementById('phone').value;
-    if (!textNumeric(x) || x.length>15) {
-        alert("Not a valid phone number");
-        return false;
-    }
-  return true;
-}
+ frmvalidator.addValidation("LastName","req", "Please enter your Last Name");
+ frmvalidator.addValidation("LastName","maxlen=50", "Max lenght for LastName is 50");
 
-function validateUsername() {
-    var x = document.getElementById('username').value;
-    if (x.length>12 || x.length===0) {
-        alert("Not a valid username");
-        return false;
-    }
-  return true;
-}
+ frmvalidator.addValidation("Email","maxlen=50");
+ frmvalidator.addValidation("Email","req");
+ frmvalidator.addValidation("Email","email");
 
-function validatePassword() {
-    var x = document.getElementById('password').value;
-    if (x.length>7 || x.length===0) {
-        alert("Not a valid password");
-        return false;
-    }
-  return true;
-}
-function validateAddress() {
-    var x = document.getElementById('address').value;
-    if (x.length===0) {
-        alert("Not a valid address");
-        return false;
-    }
-  return true;
-}
-function validateCity() {
-    var x = document.getElementById('city').value;
-    if (x.length===0) {
-        alert("Not a valid city");
-        return false;
-    }
-  return true;
-}
-function validateCountry() {
-    var x = document.getElementById('country').value;
-    if (x.length===0) {
-        alert("Not a valid country");
-        return false;
-    }
-  return true;
-}
+ frmvalidator.addValidation("Phone","maxlen=50");
+ frmvalidator.addValidation("Phone","numeric");
 
-function validateZip() {
-  var x = document.getElementById('zip').value;
-  var y = document.getElementById('country').value;
-    if (y.length==2){
-      if(x.length>5 || x.length===0){
-        alert("Not a valid Zip");
-        return false;
-      }else{
-        return true;
-      }
-    }
-  return true;
-}
-function validateForm() {
-  if (!validateFirstName() || !validateLastName() || !validateEmail() || !validatePhone() || !validateUsername() || !validatePassword() || !validateAddress() || !validateCity() || !validateCountry() || !validateZip()) {
-    alert('Please fix errors to submit.');
-    return false;
+ frmvalidator.addValidation("Address","maxlen=50");
+ frmvalidator.addValidation("Country","dontselect=000");
+//view sourceprint?
+
+function validateForm(){
+//1) create a variable to control status of each field.  Assume that they are not valid
+
+//2) create variables to read the values from html
+
+//3) do the validation
+
+//4) send error messages
+
+//5) return the status of each field
+
+//***to validate first name
+
+//1) Create variable
+var validFirstname=false;
+//2) read value from HTML
+var firstname = document.getElementById("FirstName").value;
+//3) Do validation
+if (firstname==="null" || firstname==="" || firstname.length > 20)
+    errorMessages += "<p>The firstname is required and cannot be greater than 20 characters</p>";
+else
+   validFirstname = true;
+//4) Send error message to HTML
+document.getElementById("errorMessages").innerHTML = errorMessages.toString();
+
+//5) return status of each field
+//return (validFirstname);
+
+
+
+//***to validate LastName
+//1) Create variable
+var validLastname=false;
+//2) read value from HTML
+var lastname = document.getElementById("LastName").value;
+//3) Do validation
+if (lastname==="null" || lastname==="" || lastname.length > 50)
+    errorMessages += "<p>The lastname is required and cannot be greater than 50 characters</p>";
+else
+   validLastname = true;
+//4) Send error message to HMTL
+
+document.getElementById("errorMessages").innerHTML = errorMessages.toString();
+//5) return status of each field
+return (validFirstname && validLastname);
+
+/*
+//***to validate the email
+var userEmail = document.getElementById("email").value;
+var atpos = userEmail.indexOf("@");
+var dotpos = userEmail.lastIndexOf(".");
+if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=userEmail.length) {
+    // send error message. For example:  errorMessages = "<p>Invalid email</p>";
+else
+    return true; //Or assign the value to a variable. For example validEmail = true;
   }
-  else {
-    alert('Thank you.');
-    return true;
-  }
+
+  //***to validate for Phone
+  var phone = document.getElementById("phone").value;
+if (isNaN(phone) || phone.lenght >15 || phone===null || phone==="")
+//send error message. For example errorMessages = "<p>Invalid phone number </p>";
+else
+  return true; //Or assign the value to a variable. For example validPhone = true;
+
+//You can also do pattern matching by using the match() method from the string object
+var numbers=/^[0-9]+$/;
+if (phone===null||phone ==="" ||phone.length>15|| !phone.match(numbers))
+//...
+else
+//...
+
+
+///***to validate for Zipcode
+var country = document.getElementById("country").value;
+if (country === "USA)
+// validate Zipcode according to the rules
+else
+//Zipcode is OK. For example: validZipcode = true;
+
+*/
 }
