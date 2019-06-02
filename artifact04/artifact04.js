@@ -3,7 +3,6 @@
  frmvalidator.addValidation("FirstName","maxlen=20",
         "Max length for FirstName is 20");
 
-
  frmvalidator.addValidation("LastName","req", "Please enter your Last Name");
  frmvalidator.addValidation("LastName","maxlen=50", "Max lenght for LastName is 50");
 
@@ -64,7 +63,7 @@ document.getElementById("errorMessages").innerHTML = errorMessages.toString();
 //5) return status of each field
 return (validFirstname && validLastname);
 
-/*
+
 //***to validate the email
 var userEmail = document.getElementById("email").value;
 var atpos = userEmail.indexOf("@");
