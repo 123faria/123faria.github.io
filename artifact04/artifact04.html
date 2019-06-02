@@ -4,6 +4,7 @@
     <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Artifact04</title>
+    <script src="gen_validatorv4.js" type="text/javascript"></script>
   </head>
   <body>
     <h1>CONTACT US FROM</h1>
@@ -14,18 +15,20 @@
 <p>
     <label for="FirstName">First Name:</label>
     <input type="text" id="FirstName" name="FirstName" />
+
 </p>
 <p>
-    <label for='LastName'>Last Name:</label>
+    <label for="LastName">Last Name:</label>
     <input type="text" id="LastName" name="LastName" />
 </p>
 <p>
-    <label for='EMail'>Email:</label>
-    <input type="text" id="EMail" name="EMail" />
+    <label for="Email">Email:</label>
+    <input type="Email" id="Email" name="Email" />
 </p>
 <p>
-    <label for='Phone'>Phone:</label>
-    <input type="text" id="Phone" name="Phone" />
+    <label for="Phone">Phone:</label>
+    <!--<input type="text" id="Phone" name="Phone" />-->
+  <input type='tel' id="Phone" name="Phone" />
 </p>
       <p><label>Username:</label>
       <input type="text" id="username" name="username" size="20"></p>
@@ -36,7 +39,7 @@
 
 
 
-    <label for='Address'>Address:</label>
+    <label for="Address">Address:</label>
     <textarea cols="20" rows="1" id="Address" name="Address"></textarea>
 <!--<table>
   <tr>
@@ -104,7 +107,7 @@
     <label for='Country'>Country:</label>
     <select id="Country"  name="Country">
         <option value="000" selected="selected">[choose yours]</option>
-        <option value="008">American</option>
+        <option value="008">USA</option>
         <option value="012">Canada</option>
         <option value="016">Afghanistan</option>
         <option value="020">United Kingdom</option>
@@ -132,6 +135,6 @@
 <!--<script  src="artifact04.js"></script>-->
 <!--<script language="JavaScript" src="artifact04.js" type="text/javascript"></script>-->
 </form>
-<script language="JavaScript" src="artifact04.js" type="text/javascript"></script>
+  <script language="JavaScript" src="artifact04.js" type="text/javascript"></script>
 </body>
 </html>
