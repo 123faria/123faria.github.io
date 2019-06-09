@@ -58,6 +58,14 @@ border: 1px solid #FFE25F;
 display: inline;
 }
 
+#animation {
+  background: #ffb3b3;
+      float: left; width: 895px; margin: 10px 0 40px 0px;
+      padding: 5px 12px;
+}
+
+
+
 #topmenu {
 background: #99ffff;
 padding: 10px 20px;
@@ -139,3 +147,9 @@ border-top: 1px solid #1f1f1f;
 .left { float: left; }
 .right { float: right; }
 .clear { clear: both; }
+
+/*
+#playmusic {
+   display: none;
+
+}*/
